@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate = new Date(nowYear, 11, 31);        //올해 12/31일
+        var diffDate = theDate.getTime() - today.getTime(); //올해 12/31 - 오늘
+
+        var result = Math.ceil(diffDate / (60*1000*60*24));
+        document.write("연말 D-Day: " + result + "일 남았습니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
