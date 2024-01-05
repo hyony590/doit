@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+
+        //3초 간격으로 addNum +1 반복실행
+        var auto_1 = setInterval(function(){
+            addNum++;
+            console.log("addNum : " + addNum);
+        },3000);
+
+        //3초 간격으로 subNum -1 반복실행
+        var auto_2 = setInterval(() => {
+            subNum--; 
+            console.log("subNum : " + subNum);
+        }, 3000);
+    </script>
+</head>
+<body>
+    <button onclick="clearInterval(auto_1)">증가 stop</button>
+    <button onclick="clearInterval(auto_2)">감소 stop</button>
+</body>
+</html>
