@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function chColor(){
+        var arrColor = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        var arrNum = arrColor[Math.floor(Math.random() * (arrColor.length))];
+
+        var bodyTag = document.getElementById("theBody");
+        bodyTag.style.background = arrNum;
+        console.log(arrNum);
+    }
+
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="chColor()">배경 색상 바꾸기</button>
+</body>
+</html>
