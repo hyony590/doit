@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접관계선택자 - 범위제한 전체 형/동생 요소 선택자</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            var style_1 = {
+                'background-color': 'yellow' ,
+                'border' : '2px dashed pink'
+            }
+            $(".txt3").prevUntil(".title").css(style_1);    //txt3부터 이전의 title까지
+            $(".txt3").nextUntil(".txt6").css(style_1);     //txt3부터 이후의 txt6까지
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="title">선택자</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p class="txt3">내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p class="txt6">내용6</p>
+    </div>
+</body>
+</html>

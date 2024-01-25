@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eq/lt/gt 선택자</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu li:eq(2)").css({"background-color" : "pink"});    //인덱스 2번만  => 내용3만 핑크
+            $("#menu li:lt(2)").css({"background-color" : "orange"});    //인덱스 2번보다 작은 인덱스들만 => 내용1,2 오렌지
+            $("#menu li:gt(2)").css({"background-color" : "aquamarine"});    //인덱스 2번보다 큰인덱스만 => 내용4만 민트
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>선택한 요소 중 지정한 인덱스보다 작은(lt, Less Than)</li>
+        <li>선택한 요소 중 지정한 인덱스보다 작은(lt, Less Than)</li>
+        <li>선택한 요소 중 지정한 인덱스가 참조하는</li>
+        <li>선택한 요소 중 지정한 인덱스보다 큰(gt, Greater Than)</li>
+    </ul>
+</body>
+</html>

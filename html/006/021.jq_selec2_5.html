@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child(숫자n) / nth-last-of-type(숫자) 선택자</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu1 li:nth-child(1)").css({"background-color" : "pink"});     //menu1의 li의 요소 중 첫번째만
+            $("#menu1 li:nth-child(2n)").css({"border":"2px dashed orange"});   //menu1의 li의 요소 중 2의 배수만
+            $("#menu2 li:nth-last-child(2)").css({"background-color" : "aqua"});   //menu2의 li의 요소 중 2번째만
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+    </ul>
+</body>
+</html>

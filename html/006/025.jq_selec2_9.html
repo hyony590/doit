@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.inArray()/$.isArray()/$.merge() 메서드</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            var arr1 = ["서울", "대전", "대구", "부산", "찍고 아하!", "부산"];
+            var arr2 = ["한국", "미국", "일본", "캐나다", "이탈리아"];
+            var obj = {
+                "area" : "수원",
+                "name" : "이사원"
+            };
+            
+            var idxNum = $.inArray('부산', arr1);   //arr1에서 '부산' 찾기. 첫번째로 찾은 인덱스 리턴
+            console.log('idxNum : ' + idxNum);
+
+            var okArray1 = $.isArray(arr1);         //배열이면 true
+            var okArray2 = $.isArray(obj);          //배열이 아니면 false
+            console.log('okArray1 : ' + okArray1);
+            console.log('okArray2 : ' + okArray2);
+            
+            $.merge(arr1, arr2);    //arr1에다가 arr2를 합치기
+            console.log(arr1);  
+        });
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
