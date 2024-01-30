@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before() / insertBefore() / after() / insertAfter() 메서드 </title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            $("#wrap p:eq(2)").after("<p>내용 3 뒤에 After로 넣음</p>")
+            $("<p>내용 2 뒤에 insertAfter로 넣음</p>").insertAfter("#wrap p:eq(1)");
+
+            $("#wrap p:eq(1)").before("<p>내용2 앞에 Before로 넣음</p>");
+            $("<p>내용1 앞에 insertBefore로 넣음</p>").insertBefore("#wrap p:eq(0)");
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 위치 메서드</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            var $txt_1 = $(".txt_1 span"),
+                $txt_2 = $(".txt_2 span"),
+                $box = $(".box");
+
+            var off_t = $box.offset().top;
+            var pos_t = $box.position().top;
+
+            $txt_1.text(off_t);
+            $txt_2.text(pos_t);
+        });
+    </script>
+    <style>
+        *{padding:0;margin:0;}
+        #box_wrap{
+            width:300px;
+            height:200px;
+            margin:50px auto 0;
+            position:relative;
+            background-color: #ccc;
+        }
+        .box{
+            width:50px;
+            height:50px;
+            position:absolute;
+            left:100px;
+            top:50px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt_1">절대top위칫값: <span></span></p>
+    <p class="txt_2">상태top위칫값: <span></span></p>
+</body>
+</html>

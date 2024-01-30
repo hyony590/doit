@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append() / appendTo() / prepend() / prependTo() 메서드 </title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            $("<li>선택 요소의 맨 뒤에 작성 : appendTo</li>").appendTo("#listZone");
+            $("#listZone").prepend("<li>선택 요소의 맨 앞에 작성 : prepend</li>")
+        });
+    </script>
+</head>
+<body>
+    <ul id="listZone">
+        <li>내용1</li>
+    </ul>
+</body>
+</html>

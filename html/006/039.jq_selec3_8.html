@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤바 위치 메서드</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            var topNum = $("h1").offset().top;      //h1이 문서에서 수직으로 얼마나 떨어져있는지 반환
+            $(window).scrollTop(topNum);            //스크롤 위치에 그 값을 넣어서, 화면이 열릴때 스크롤바가 해당하는 위치에 가도록
+
+            var sct = $(window).scrollTop();
+            console.log(sct);
+        });
+    </script>
+    <style>
+        *{padding:0;margin:0;}
+        body{line-height: 1;}
+        #wrap{
+            height:5000px; padding-top:2000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+</body>
+</html>
