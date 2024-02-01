@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on() 메서드</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            //이벤트를 등록하고 class값을 생성하면 작동X
+            $(".btn1.on").on('mouseover focus', function(){
+                alert('hello');
+            })
+            $('.btn1').addClass('on');
+
+            //라이브 이벤트 등록 방식으로 이벤트를 등록하고 class를 넣으면 정상 작동
+            $(document).on('mouseover focus', '.btn2.on', function(){
+                alert('welcome!');
+            });
+            $('.btn2').addClass('on');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn1">버튼1</button></p>
+        <p><button class="btn2">버튼2</button></p>
+    </div>
+</body>
+</html>
