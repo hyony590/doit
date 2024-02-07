@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeTo메서드</title>
+    <script src="\js\jquery.js"></script>
+</head>
+<script>
+    $(function(){
+        $(".btn2").hide();
+        
+        //요소가 위로 접히며 숨겨짐
+        $(".btn1").on('click', function(){
+            $(".box").slideUp(1000, 'linear', function(){
+                $(".btn1").hide();
+                $(".btn2").show();
+            });
+        });
+        //숨겨진 요소가 점점 선명해짐
+        $(".btn2").on('click', function(){
+            $(".box").fadeIn(1000, 'swing', function(){
+                $(".btn2").hide();
+                $(".btn1").show();
+            });
+        });
+        //hide(), show() 효과 적용
+        $(".btn3").on('click', function(){
+            $(".box").slideToggle(1000, 'linear');
+        });
+        //투명도 0.3이 됨
+        $(".btn4").on('click', function(){
+            $(".box").fadeTo('fast', 0.3);
+        });
+        //투명도 1이 됨
+        $(".btn5").on('click', function(){
+            $(".box").fadeTo('fast', 1)
+        })
+    })
+</script>
+<style>
+    .content{width: 400px; background-color: #eee;}
+</style>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum...
+        </div>
+    </div>
+</body>
+</html>
