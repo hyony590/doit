@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php로 가져온 데이터를 HTML로 불러오기</title>
+    <script src="\js\jquery.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url : "news_test.php",
+                dataType : "xml",
+                success : function(data){
+                    console.log(data);
+                    var $items = $(data).find('item');
+                    if($items.length > 0){
+                        $items = $items.slice(0, 10);
+                        var $ulTag = $("<ul />");
+                        $.each($items, function(i, o){
+                            var $title = $(o).find('title').text();
+                            var $link = $(o).find('link').text();
+
+                            var $aTag = $("<a/>").attr({"href" : $link, "target" : "_blank"}).text($title);
+                            var $liTag = $("<li />").append($aTag);
+                            $ulTag.append($liTag);
+                        });
+                        $(".wrap").append($ulTag);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
