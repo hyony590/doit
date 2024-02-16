@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <style>
+        .layer_popup{
+            position:absolute;
+            left:50px;
+            top:50px;
+            cursor:move;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".layer_popup").draggable();      //마우스로 레이어 팝업 창을 드래그하면 레이어 팝업 창을 이동할 수 있음
+        })
+    </script>
+</head>
+<body>
+    <div class="layer_popup">
+        <img src="/images/window_object_1.jpg" alt="">
+    </div>
+</body>
+</html>

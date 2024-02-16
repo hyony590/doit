@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="../css/jquery-ui.theme.css"> -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="../css/jquery-ui.structure.min.css"> -->
+    <style>
+        .layer_popup{
+            position:absolute;
+            left:50px;
+            top:50px;
+            cursor:move;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#startDate").datepicker({
+                minDate:-20,            //현재 날짜 기준으로 20일 전부터
+                maxDate: "+1M +10D"     //현재 날짜 기준으로 1개월 10일 후의 날짜까지
+            });
+        })
+    </script>
+</head>
+<body>
+    <p>
+        <label for="startDate">날짜선택</label>
+        <input type="text" name="startDate" id="startDate">
+    </p>
+</body>
+</html>
