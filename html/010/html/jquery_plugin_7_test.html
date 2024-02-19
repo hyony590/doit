@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxSlider 이용해 썸네일 페이지 슬라이드 갤러리 구현하기</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(function(){
+            $(".slide_gallery").bxSlider({
+                auto:true,
+                autoControls:false,
+                pagerCustom:'.slider-pager'     //썸네일 pager의 class값
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery_wrap">
+        <ul class="slide_gallery">
+            <li><img src="../images/pic_1.jpg" alt="사진1"></li>
+            <li><img src="../images/pic_2.jpg" alt="사진2"></li>
+            <li><img src="../images/pic_3.jpg" alt="사진3"></li>
+            <li><img src="../images/pic_4.jpg" alt="사진4"></li>
+            <li><img src="../images/pic_8.jpg" alt="사진8"></li>
+        </ul>
+        <ul class="slider-pager">
+            <li><a href="#" data-slide-index="0"><img src="../images/pic_t1.jpg" alt="사진1"></a></li>
+            <li><a href="#" data-slide-index="1"><img src="../images/pic_t2.jpg" alt="사진2"></a></li>
+            <li><a href="#" data-slide-index="2"><img src="../images/pic_t3.jpg" alt="사진3"></a></li>
+            <li><a href="#" data-slide-index="3"><img src="../images/pic_t4.jpg" alt="사진4"></a></li>
+
+        </ul>
+    </div>
+</body>
+</html>

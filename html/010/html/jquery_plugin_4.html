@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        $(function(){
+            if($.cookie("popup")=="none"){
+                $("#notice_wrap").hide();
+            }
+
+            var $expChk = $("#expiresChk");
+            $(".closeBtn").on('click', closePop);
+
+            function closePop(){
+                if($expChk.is(":checked")){
+                    $.cookie('popup', 'none', {expires:3, path:"/"});       //제이쿼리 쿠키 만들기
+                }
+                $("#notice_wrap").fadeOut("fast");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="notice_wrap">
+        <img src="/images/window_object_1.jpg" alt="공지사항">
+        <p class="closeWrap">
+            <input type="checkbox" name="expiresChk" id="expiresChk">
+            <label for="expiresChk">3일 동안 이 창 열지않기</label>
+            <button class="closeBtn">닫기</button>
+        </p>
+    </div>
+</body>
+</html>
